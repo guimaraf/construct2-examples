@@ -132,8 +132,6 @@
                     <instance-variables>
                         <fixed>16</fixed>
                         <color>0</color>
-                        <fixexY>16</fixexY>
-                        <colorValue>0</colorValue>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -166,8 +164,6 @@
                     <instance-variables>
                         <fixed>82</fixed>
                         <color>0</color>
-                        <fixexY>48</fixexY>
-                        <colorValue>0</colorValue>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -200,8 +196,6 @@
                     <instance-variables>
                         <fixed>142</fixed>
                         <color>0</color>
-                        <fixexY>142</fixexY>
-                        <colorValue>0</colorValue>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">

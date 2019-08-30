@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Replace Color</name>
-    <description></description>
-    <version>1.0.0.0</version>
-    <author></author>
-    <author-email></author-email>
-    <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <description>Replace Color</description>
+    <version>1.0</version>
+    <author>Frederico Oliveira</author>
+    <author-email>guimaraf@gmail.com</author-email>
+    <author-website>https://guimaraf.github.io/</author-website>
+    <app-id>com.chronosgames.replace</app-id>
     <unique-id>p5e5pht9g8m2</unique-id>
     <saved-with-version>26700</saved-with-version>
     <used-plugins>
@@ -73,10 +73,6 @@
         </object-type>
         <object-type name="selectorRed" sid="253563389953476">
             <plugin id="TiledBg" />
-            <instance-variables>
-                <instance-variable name="fixexY" sid="710113824699247" type="number" />
-                <instance-variable name="colorValue" sid="703339391132001" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="557026672595143">
                     <behavior id="DragnDrop" />
@@ -86,10 +82,6 @@
         </object-type>
         <object-type name="selectorGreen" sid="197739723658062">
             <plugin id="TiledBg" />
-            <instance-variables>
-                <instance-variable name="fixexY" sid="907982513885629" type="number" />
-                <instance-variable name="colorValue" sid="399303082320575" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="245767458185127">
                     <behavior id="DragnDrop" />
@@ -99,10 +91,6 @@
         </object-type>
         <object-type name="selectorBlue" sid="384218460332962">
             <plugin id="TiledBg" />
-            <instance-variables>
-                <instance-variable name="fixexY" sid="530099254451769" type="number" />
-                <instance-variable name="colorValue" sid="457463523422276" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="670968860856253">
                     <behavior id="DragnDrop" />

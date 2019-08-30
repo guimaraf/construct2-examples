@@ -3,7 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <comment>posicao seletor - tamanho barra + largura seletor = 510 / 2</comment>
+        <comment>Foi usado família pois eu precisava do mesmo comportamento para os 3 objetos</comment>
+        <comment>Comecei posicionando os seletores para o lado esquerdo, ficando tudo 0,0,0 nas respectivas cores</comment>
+        <comment></comment>
+        <comment>Usei o behavior DragDrop para mover com o mouse, depois fixei os limites para esquerda e direita</comment>
+        <comment></comment>
         <event-block sid="318067876910396">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="396182707622712" type="System" />
@@ -14,6 +18,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="385160103728989">
             <conditions>
                 <condition id="-1" name="Compare X" sid="393221137206949" type="selector">
@@ -35,14 +40,21 @@
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-1" name="Set X" sid="134611046508176" type="selectorRed">
-                    <param id="0" name="X">674</param>
-                </action>
                 <action id="-1" name="Set X" sid="915809081332279" type="selector">
                     <param id="0" name="X">674</param>
                 </action>
             </actions>
         </event-block>
+        <comment>por fim fixei cada um dos seletores para que não se movam no eixo y, pois o DragDrop tem movimento livre</comment>
+        <comment></comment>
+        <comment>para o cálculo da posição deu um certo trabalho, pois eu queria centralizar tudo, porém eu precisava que o seletor, percorresse exatamente 510 pixels, então tive que criar as barras com um tamanho um pouco maior</comment>
+        <comment></comment>
+        <comment>desta forma usando a família, eu posso pegar a posição atual do seletor - a posição mínima + 8 que da no máximo 510, por fim divido por 2 que é o total do valor de cada uma das cores</comment>
+        <comment></comment>
+        <comment>No effeito, ele tem 6 parâmetros, os 3 primeiros são as cores originais, as demais são as novas cores</comment>
+        <comment>mandei converter para um valor inteiro</comment>
+        <comment></comment>
+        <comment>Concluindo, eu mandei mostrar o valor de cada barra em texto, usando o operador ternário</comment>
         <event-block sid="574945216356119">
             <conditions />
             <actions>
