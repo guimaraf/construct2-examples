@@ -3,3 +3,6 @@ Several small codes to help the Brazilian game development community using the C
 
 # Effect Replace Color
 <img src="/img/replace.png?v=3&s=200" title="" alt="">
+
+### Links
+[Teste o Replace Color](https://guimaraf.github.io/works/replace/)
