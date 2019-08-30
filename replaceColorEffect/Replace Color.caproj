@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Replace Color</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>p5e5pht9g8m2</unique-id>
+    <saved-with-version>26700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="replacecolor">Replace color</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Firefox</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="box" sid="645380460922097">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="ReplaceColor">
+                    <effect id="replacecolor" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873504164674002" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="red" sid="922183693681826">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="green" sid="902444282748032">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="blue" sid="621889753758020">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="selectorRed" sid="253563389953476">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="fixexY" sid="710113824699247" type="number" />
+                <instance-variable name="colorValue" sid="703339391132001" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="557026672595143">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="selectorGreen" sid="197739723658062">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="fixexY" sid="907982513885629" type="number" />
+                <instance-variable name="colorValue" sid="399303082320575" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="245767458185127">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="selectorBlue" sid="384218460332962">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="fixexY" sid="530099254451769" type="number" />
+                <instance-variable name="colorValue" sid="457463523422276" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="670968860856253">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Text" sid="173049651318432">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="selector" plugin-id="TiledBg" sid="151508957472156">
+            <members>
+                <member>selectorBlue</member>
+                <member>selectorGreen</member>
+                <member>selectorRed</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="fixed" sid="198846017632841" type="number" />
+                <instance-variable name="color" sid="403030459866722" type="number" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

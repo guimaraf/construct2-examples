@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <comment>posicao seletor - tamanho barra + largura seletor = 510 / 2</comment>
+        <event-block sid="318067876910396">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="396182707622712" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="555997991039515" type="selector">
+                    <param id="0" name="X">164</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="385160103728989">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="393221137206949" type="selector">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">164</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="737022252147292" type="selector">
+                    <param id="0" name="X">164</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="213335591825472">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="656446287671129" type="selector">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">674</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-1" name="Set X" sid="134611046508176" type="selectorRed">
+                    <param id="0" name="X">674</param>
+                </action>
+                <action id="-1" name="Set X" sid="915809081332279" type="selector">
+                    <param id="0" name="X">674</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="574945216356119">
+            <conditions />
+            <actions>
+                <action id="-2" name="Set Y" sid="264429730366447" type="selector">
+                    <param id="0" name="Y">selector.fixed</param>
+                </action>
+                <action id="-10" name="Set value" sid="595271329992401" type="selector">
+                    <param id="0" name="Instance variable">color</param>
+                    <param id="1" name="Value">((selector.X - 172) + 8 ) /2</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="314795866524595" type="box">
+                    <param id="0" name="Effect">&quot;ReplaceColor&quot;</param>
+                    <param id="1" name="Parameter index">3</param>
+                    <param id="2" name="Value">int(selectorRed.color)</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="257395962299804" type="box">
+                    <param id="0" name="Effect">&quot;ReplaceColor&quot;</param>
+                    <param id="1" name="Parameter index">4</param>
+                    <param id="2" name="Value">int(selectorGreen.color)</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="628289406955434" type="box">
+                    <param id="0" name="Effect">&quot;ReplaceColor&quot;</param>
+                    <param id="1" name="Parameter index">5</param>
+                    <param id="2" name="Value">int(selectorBlue.color)</param>
+                </action>
+                <action id="0" name="Set text" sid="825733631759017" type="Text">
+                    <param id="0" name="Text">Self.UID = 1 ? int(selectorRed.color) : Self.Text</param>
+                </action>
+                <action id="0" name="Set text" sid="569257636777411" type="Text">
+                    <param id="0" name="Text">Self.UID = 6 ? int(selectorGreen.color) : Self.Text</param>
+                </action>
+                <action id="0" name="Set text" sid="382253949108343" type="Text">
+                    <param id="0" name="Text">Self.UID = 9 ? int(selectorBlue.color) : Self.Text</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
