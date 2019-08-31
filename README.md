@@ -12,3 +12,11 @@ Several small codes to help the Brazilian game development community using the C
 
 ### Links
 [Teste o efeito de chuva](https://guimaraf.github.io/c2/rain2d/)
+
+# Rain 2D Effect
+<img src="/img/stageSelect.png?v=3&s=200" title="" alt="">
+
+### Links
+[Teste o Stage Select com apenas 8 eventos](https://guimaraf.github.io/c2/stageselect/)
+
+
