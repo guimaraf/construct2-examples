@@ -8,7 +8,7 @@ Several small codes to help the Brazilian game development community using the C
 [Teste o Replace Color](https://guimaraf.github.io/c2/replace/)
 
 # Rain 2D Effect
-<img src="/img/rain2d.png?v=3&s=200" title="" alt="">
+<img src="/img/rain.png?v=3&s=200" title="" alt="">
 
 ### Links
 [Teste o efeito de chuva](https://guimaraf.github.io/c2/rain2d/)
