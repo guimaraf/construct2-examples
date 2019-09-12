@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <comment></comment>
+        <variable constant="0" name="corColect" sid="623633513106143" static="0" type="number">0</variable>
+        <variable constant="0" name="sequence" sid="512018616996565" static="0" type="number">0</variable>
+        <comment></comment>
+        <variable constant="0" name="score" sid="960938408255989" static="0" type="number">0</variable>
+        <variable constant="0" name="record" sid="692310910427216" static="0" type="number">0</variable>
+        <comment></comment>
+        <variable constant="0" name="playSequence" sid="801868636764309" static="0" type="number">0</variable>
+        <variable constant="0" name="iterator" sid="655509906504182" static="0" type="number">0</variable>
+        <comment>starting game</comment>
+        <event-block sid="695088569650313">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="573137036783951" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="471930417211002" type="LocalStorage">
+                    <param id="0" name="Key">&quot;geniusC2guimaraf&quot;</param>
+                </action>
+                <action disabled="1" id="3" name="Clear storage" sid="113949250011394" type="LocalStorage" />
+                <action id="-16" name="Wait" sid="952315881810320" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="2" name="Set at X" sid="779350988049203" type="arSequence">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">choose(0,1,2,3)</param>
+                </action>
+                <action id="2" name="Set at X" sid="993831737246204" type="arSequence">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">choose(0,1,2,3)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="536385195097803">
+            <conditions>
+                <condition id="9" name="On item exists" sid="855581698274556" type="LocalStorage">
+                    <param id="0" name="Key">&quot;geniusC2guimaraf&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="363984689014224" type="System">
+                    <param id="0" name="Variable">record</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="0" name="Set text" sid="988026664835027" type="Text">
+                    <param id="0" name="Text">Self.UID = 12 ? &quot;Record: &quot; &amp; record : Self.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="922537886944982">
+            <conditions>
+                <condition id="3" name="On touched object" sid="328491625099154" type="Touch">
+                    <param id="0" name="Object">play</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="122228892143738" type="play" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="627240312279638" type="play">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="729655877826490" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="856659396126824" type="play">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="384510160431640" type="play">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="404591951828559" type="play">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="408064564863850" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="0" name="Call function" sid="764322729143228" type="Function">
+                    <param id="0" name="Name">&quot;FlashColors&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Automatic sequence</comment>
+        <event-block sid="248313251508039">
+            <conditions>
+                <condition id="0" name="On function" sid="939556337803818" type="Function">
+                    <param id="0" name="Name">&quot;FlashColors&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="611591878559326" type="System">
+                    <param id="0" name="Variable">playSequence</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="331640261800939" type="colors">
+                    <param id="0" name="Frame number">Self.id = arSequence.At(iterator) ? 1 : 0</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="175841896886902" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">tokenat(&quot;do,fa,la,mi&quot;,arSequence.At(iterator),&quot;,&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;note&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="937454327810357" type="System">
+                    <param id="0" name="Variable">iterator</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="998363041341704" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="5" name="Set frame" sid="439464229034152" type="colors">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="896942709559324" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="147962371457891">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="820653733492398" type="System">
+                            <param id="0" name="Variable">iterator</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">arSequence.Width - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="173061682038252" type="Function">
+                            <param id="0" name="Name">&quot;FlashColors&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="232069760832781">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="168907658772531" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="173019457060072" type="System">
+                            <param id="0" name="Variable">playSequence</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block sid="686607444729815">
+            <conditions>
+                <condition id="3" name="On touched object" sid="258285489278118" type="Touch">
+                    <param id="0" name="Object">colors</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="488392186403149" type="colors">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="341574684775365" type="play" />
+                <condition id="-14" name="Compare variable" sid="625480799658063" type="System">
+                    <param id="0" name="Variable">playSequence</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="704439762380988" type="System">
+                    <param id="0" name="Variable">corColect</param>
+                    <param id="1" name="Value">colors.id</param>
+                </action>
+                <action id="5" name="Set frame" sid="102985736114885" type="colors">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="468597772186009" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">tokenat(&quot;do,fa,la,mi&quot;,colors.id,&quot;,&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;note&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="698456559772265" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="309564148943256" type="colors">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="0" name="Call function" sid="747123170966830" type="Function">
+                    <param id="0" name="Name">&quot;VerifyCorrect&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="418644064712409">
+            <conditions>
+                <condition id="0" name="On function" sid="903391972832340" type="Function">
+                    <param id="0" name="Name">&quot;VerifyCorrect&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="219524239751393">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="592285409757428" type="System">
+                            <param id="0" name="Variable">corColect</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">arSequence.At(sequence)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="439338581791902" type="System">
+                            <param id="0" name="Variable">sequence</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="221672897249656" type="Function">
+                            <param id="0" name="Name">&quot;Complete&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621332534820603">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="480635243377303" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="160298889462599" type="colors">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="107452110332202" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;error&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="777643354466194">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="364490896032702" type="System">
+                                    <param id="0" name="Variable">score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">record</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="308475972741278" type="System">
+                                    <param id="0" name="Variable">record</param>
+                                    <param id="1" name="Value">score</param>
+                                </action>
+                                <action id="0" name="Set item" sid="862795387290516" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;geniusC2guimaraf&quot;</param>
+                                    <param id="1" name="Value">score</param>
+                                </action>
+                                <action id="0" name="Call function" sid="466134220558879" type="Function">
+                                    <param id="0" name="Name">&quot;ResetVariables&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="682905130373998">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="989066705151671" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="565866719426580" type="Function">
+                                    <param id="0" name="Name">&quot;ResetVariables&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="439228271934949">
+            <conditions>
+                <condition id="0" name="On function" sid="866545222157525" type="Function">
+                    <param id="0" name="Name">&quot;Complete&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="836951115953288">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="454548004026187" type="System">
+                            <param id="0" name="First value">sequence</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">arSequence.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="324000348394721" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="460806966606337" type="Text">
+                            <param id="0" name="Text">Self.UID = 7 ? &quot;Score: &quot; &amp; score : Self.Text</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="798200509311190" type="System">
+                            <param id="0" name="Variable">iterator</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="321779533320769" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action id="1" name="Set size" sid="161399094227571" type="arSequence">
+                            <param id="0" name="Width">sequence + 1</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="246031498129805" type="arSequence">
+                            <param id="0" name="X">sequence</param>
+                            <param id="1" name="Value">choose(0,1,2,3)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="926570523571298" type="System">
+                            <param id="0" name="Variable">sequence</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="954217252222839" type="Function">
+                            <param id="0" name="Name">&quot;FlashColors&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="832270810916918">
+            <conditions>
+                <condition id="0" name="On function" sid="392642025632734" type="Function">
+                    <param id="0" name="Name">&quot;ResetVariables&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="185576576771966" type="System">
+                    <param id="0" name="Variable">corColect</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="353509500470430" type="System">
+                    <param id="0" name="Variable">iterator</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="164829023226369" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="372657792614241" type="System">
+                    <param id="0" name="Variable">sequence</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Clear" sid="695467411568302" type="arSequence" />
+                <action id="1" name="Set size" sid="177831378143953" type="arSequence">
+                    <param id="0" name="Width">2</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="506273251806841" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="129965729443852" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
