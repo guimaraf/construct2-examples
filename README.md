@@ -5,22 +5,22 @@ Several small codes to help the Brazilian game development community using the C
 <img src="/img/replace.png?v=3&s=200" title="" alt="">
 
 ### Links
-[Teste o Replace Color](https://guimaraf.github.io/c2/replace/)
+[Teste o Replace Color](https://guimaraf.github.io/works/replace/)
 
 # Rain 2D Effect
 <img src="/img/rain.png?v=3&s=200" title="" alt="">
 
 ### Links
-[Teste o efeito de chuva](https://guimaraf.github.io/c2/rain2d/)
+[Teste o efeito de chuva](https://guimaraf.github.io/works/rain2d/)
 
 # Stage Select
 <img src="/img/stageSelect.png?v=3&s=200" title="" alt="">
 
 ### Links
-[Teste o Stage Select com apenas 8 eventos](https://guimaraf.github.io/c2/stageselect/)
+[Teste o Stage Select com apenas 8 eventos](https://guimaraf.github.io/works/stageselect/)
 
 # Simon
 <img src="/img/simon.png?v=3&s=200" title="" alt="">
 
 ### Links
-[Teste o jogo](https://guimaraf.github.io/c2/simon/)
+[Teste o jogo](https://guimaraf.github.io/works/simon/)
