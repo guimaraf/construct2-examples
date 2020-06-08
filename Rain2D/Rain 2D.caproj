@@ -8,7 +8,7 @@
     <author-website>https://guimaraf.github.io/</author-website>
     <app-id>com.chronosgames.rain</app-id>
     <unique-id>11m76iy4rbsbi</unique-id>
-    <saved-with-version>26700</saved-with-version>
+    <saved-with-version>25000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
